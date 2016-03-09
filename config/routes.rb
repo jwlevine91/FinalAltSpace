@@ -12,8 +12,24 @@ Rails.application.routes.draw do
   get 'spaces/edit'
 
   resources :users, only: [:show, :index]
-  resources :spaces
+  resources :spaces  
   
+  resources :conversations, only: [:index, :show, :destroy] do
+    member do
+      post :reply
+      post :restore
+      post :mark_as_read
+    end
+    collection do
+      delete :empty_trash
+    end
+  end
+
+  resources :messages, only: [:new, :create]
+
+  resources :users, only: [:index]
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

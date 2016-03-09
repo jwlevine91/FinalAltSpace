@@ -6,4 +6,10 @@ class User < ActiveRecord::Base
 
   has_many :spaces
 
+  acts_as_messageable
+
+  def mailboxer_email(user)
+  	email
+  end
+
 end

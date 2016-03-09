@@ -6,6 +6,9 @@
 			</div>
 			<div class="col-md-3">
 				<h2><%= @user.username %></h2>
+				<h4><% unless current_user == @user %>
+        			<%= link_to 'Send message', new_message_path(to: @user.id), class: 'btn btn-default btn-sm' %></h4>
+      			<% end %>
 			</div>
 		</div>
 	</div>

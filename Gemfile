@@ -4,6 +4,15 @@ gem 'devise', '~> 4.0.0.rc1'
 gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
 gem 'simple_form'
 gem 'gravatarify', '~> 3.0.0'
+gem 'gravatar_image_tag'
+
+gem 'bootstrap-sass', '~> 3.3.6'
+gem 'bootstrap-will_paginate'
+
+gem 'mailboxer'
+gem 'will_paginate'
+
+
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5'
@@ -48,4 +57,3 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
 end
-

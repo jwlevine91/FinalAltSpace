@@ -21,3 +21,10 @@
 .caption {
 	text-align: center;
 }
+
+.messages {
+  max-height: 400px;
+  overflow-y: auto;
+  margin-bottom: 1em;
+  margin-top: 1em;
+}
