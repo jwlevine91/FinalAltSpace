@@ -103,9 +103,8 @@ footer {
 	text-align: center;
 	.form-group, .field {
 		min-width: 100px;
-		input, textarea{
-  		  background-color: $wash;
-  		  color: $asphalt;
+		input[type="text"]{
+			background-color: $asphalt !important
 		}
 		email_field, password_field {
 			@include formFillers;
