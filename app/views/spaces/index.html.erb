@@ -1,20 +1,22 @@
-<div class="jumbotron text-center">
+<div class="wrapper">
 	<h2>spaces!</h2>
 	<%= form_tag users_path do %>
 	<p>
-	<%= text_field_tag :search %>
-	<%= submit_tag "Search" %>
+	<%= text_field_tag :search %>   
+	<%= submit_tag "Search", class: "btn btn-info" %>
 	</p>
 	<% end %>
-	<div class="pull-right">
-  		<%= link_to 'Make Space', new_space_path, class:'btn btn-info' %>
-	</div>
+	<p><%= link_to 'Make Space', new_space_path, class: "btn btn-default" %><p>
 	<br>
-	<div class="btn-group" role="group" aria-label="people groups">
-  	</div>
 </div>
-<div class="container">
-	<div class="row">
-		<%= render @spaces %>
+<div class="clearfix">
+		<div class="row">
+			<%= @spaces.each do |space| %>
+				<div class="col-md-4">
+					<div class="well">
+						<h2> <%= link_to space.name, space %></h2>
+					</div>
+				</div>
+         	<% end %>
 	</div>
 </div>

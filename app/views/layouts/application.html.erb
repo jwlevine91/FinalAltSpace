@@ -1,18 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Altspace</title>
+  <title>ALTSPACE</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
+  <link href='https://fonts.googleapis.com/css?family=Megrim|Poiret+One' rel='stylesheet' type='text/css'>  <%= csrf_meta_tags %>
 </head>
 <body>
 
 <%= render 'layouts/header' %>
 
-<p class="notice"><%= notice %></p>
 
+<div class="flex">
+<p class="notice"><%= notice %></p>
 <%= yield %>
+</div>
+
+<footer class="footer">
+      <div class="container">
+        <p>© altspace 2016</p>
+      </div>
+    </footer>
 
 </body>
 </html>

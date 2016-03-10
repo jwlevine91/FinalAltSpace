@@ -1,18 +1,21 @@
-<div class="jumbotron text-center">
-	<h2>peeps!</h2>
-
+<div class="wrapper">
+	<h2>people!</h2>
 	<%= form_tag users_path do %>
 	<p>
 	<%= text_field_tag :search %>
-	<%= submit_tag "Search" %>
+	<%= submit_tag "Search", class: 'btn btn-info' %>
 	</p>
 	<% end %>
+
 	<br>
-	<div class="btn-group" role="group" aria-label="people groups">
-  	</div>
-</div>
-<div class="container">
-	<div class="row">
-		<%= render @users %>
+<div class="clearfix">
+		<div class="row">
+			<%= @users.each do |user| %>
+				<div class="col-md-4">
+					<div class="well">
+						<h2> <%= link_to user.username, user %></h2>
+					</div>
+				</div>
+         	<% end %>
 	</div>
 </div>

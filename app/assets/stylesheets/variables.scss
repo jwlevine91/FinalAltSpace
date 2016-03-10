@@ -1,0 +1,34 @@
+// COLORS
+$asphalt: #19161f;
+$sugarpop: #00A9F4;
+$jaune: #FFC10D;
+$dove: #8e7a7a;
+$morning: #c1b4b4;
+$wash: #fff;
+
+// FONTS
+
+$title: "Megrim", sans-serif;
+$text: "Poiret One", sans-serif;
+
+// MIXINS
+
+@mixin brandText {
+	font-family: $title;
+	color: $wash;
+}
+
+@mixin otherHeaderText {
+	font-family: $text;
+	color: $wash;
+}
+
+@mixin formTellers {
+	font-family: $title;
+	color: $sugarpop;
+}
+
+@mixin formFillers {
+	font-family: $text;
+	color: $asphalt;
+}
