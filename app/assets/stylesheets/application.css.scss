@@ -14,6 +14,11 @@
  *= require_self
  */
 
+@import 'variables',
+		'welcome',
+		'users',
+		'spaces';
+
 .thumbnail {
 	vertical-align: center;
 }
@@ -28,3 +33,199 @@
   margin-bottom: 1em;
   margin-top: 1em;
 }
+
+// BIG STYLES //
+
+title {
+	font-family: $text;
+}
+
+html, .notice {
+	margin-top: -4px;
+	padding: 0px;
+}
+
+body {
+	margin: 0px;
+	padding: 0px;
+	background-color: $asphalt;
+	color: $wash;
+}
+
+// NAVBAR STYLES //
+
+.navbar {
+	background-color: transparent;
+	border: dashed;
+	border-color: $wash;
+	padding: 0px;
+	margin: 0px;
+	position: absolute;
+	width: 100%;
+	
+	.navbar-brand {
+		@include brandText;
+		font-size: 2.5em;
+		margin-left: 40px;
+	}
+	.nav.navbar-nav.navbar-right {
+		li {
+			@include otherHeaderText;
+			font-size: 1.5em;	
+			margin-left: 10px;
+			margin-right: 10px;	
+		}
+	}
+}
+
+// FOOTER STYLES //
+
+footer {
+	padding-top: 10px;
+		p {
+			@include brandText;
+			font-size: 1.5em;
+			text-align: center;
+		}
+}
+
+// FORM STYLES //
+
+.flex {
+	h1, h2, h3, h4, h5, h6 {
+		@include brandText;
+		text-align: center;
+	}
+.wrapper{
+	align-items: center;
+	justify-content: space-between;
+	padding-top: 70px;
+	text-align: center;
+	.form-group, .field {
+		min-width: 100px;
+		input[type="text"]{
+			background-color: $asphalt !important
+		}
+		email_field, password_field {
+			@include formFillers;
+			color: $asphalt;
+		}
+		label {
+			@include formTellers;
+			text-size: 12em;
+		}
+		em {
+			@include brandText;
+			text-size: 4em;
+		}
+		p {
+			@include formTellers;
+			text-size: 4em;
+		}
+		text-align: center;
+		margin: 20px;
+	}
+}
+
+}
+
+// BUTTON STYLES //
+
+.btn.btn-default {
+  -webkit-border-radius: 19;
+  -moz-border-radius: 19;
+  border-radius: 19px;
+  font-family: $text;
+  background-color: transparent;
+  color: $jaune;
+  font-size: 20px;
+  padding: 7px 12px 7px 12px;
+  border: solid $jaune 2px;
+  text-decoration: none;
+}
+
+.btn.btn-default:hover {
+  background: $jaune;
+  text-decoration: none;
+  border: solid $wash 2px;
+  color: $wash;
+}
+
+.btn.btn-info {
+  -webkit-border-radius: 19;
+  -moz-border-radius: 19;
+  border-radius: 19px;
+  font-family: $text;
+  background-color: transparent;
+  color: $sugarpop;
+  font-size: 20px;
+  padding: 7px 12px 7px 12px;
+  border: solid $sugarpop 2px;
+  text-decoration: none;
+}
+
+.btn.btn-info:hover {
+  background: $sugarpop;
+  text-decoration: none;
+  border: solid $asphalt 2px;
+  color: $asphalt;
+}
+
+.btn.btn-primary {
+  -webkit-border-radius: 19;
+  -moz-border-radius: 19;
+  border-radius: 19px;
+  font-family: $text;
+  background-color: transparent;
+  color: $dove;
+  font-size: 20px;
+  padding: 7px 12px 7px 12px;
+  border: none;
+  text-decoration: none;
+}
+
+.btn.btn-primary:hover {
+  background: transparent;
+  text-decoration: none;
+  border: none;
+  color: $morning;
+}
+
+// INDEX STYLES //
+
+.clearfix {
+	margin: 20px;
+	.col-md-4 {
+		-webkit-border-radius: 19;
+	  	-moz-border-radius: 19;
+	  	border-radius: 19px;
+		margin: 15px;
+		font-family: $text;
+		background-color: transparent;
+		color: $dove;
+		font-size: 20px;
+		padding: 7px 12px 7px 12px;
+		border: solid $wash 1px;
+		text-decoration: none;
+		.well {
+			background-color: transparent;
+			border: none;
+			h2 {
+			color: $morning;
+			}
+		}
+	}
+}
+
+// COMMENT FORM STYLES //
+
+.panel-body {
+	margin: 20px;
+	border: dashed $jaune 2px;
+	background-color: transparent;
+	text-align: center;
+	.label {
+		color: $sugarpop;
+	}
+}
+
