@@ -7,6 +7,7 @@ class UsersController < ApplicationController
 
   def show
   	@spaces = Space.all
+    @comment = Comment.new
   end
 
   def name

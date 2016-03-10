@@ -11,7 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160307235112) do
+ActiveRecord::Schema.define(version: 20160310052810) do
+
+  create_table "comments", force: :cascade do |t|
+    t.string   "author"
+    t.text     "comment_entry"
+    t.integer  "rating"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+  end
 
   create_table "mailboxer_conversation_opt_outs", force: :cascade do |t|
     t.integer "unsubscriber_id"
